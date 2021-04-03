@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predicting Voter Affiliation from Demographic, Geographic, and Polling data using Machine Learning Classifiers in Python
+title: Predicting Voter Affiliation using Machine Learning Classifiers in Python
 ---
 
 
@@ -13085,7 +13085,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this notebook I'll go through some work I did for a recent political campaign where we needed to predict the affiliation of voters whose ballots were invalidated. We wanted to sue to restore the validity of many ballots - but obviously we wanted to prioritize those ballots who we had good reason to think voted for our candidate.</p>
 <p>Our candidate being young, progressive, and Latin american, we had good reason to expect that age, ethnicity, and geography (ie more left-leaning neighorhoods) were reasonable factors to influence voter affiliation. In the following map, brighter yellow areas are the strongest for our candidate relative to the primary opponent, and dark purple areas are strongest for the primary opponent relative to our candidate. 
-<img src="weight_map.png" alt="Voting preference by geography" width="360"/>
+<img src="https://illesial.github.io/images/weight_map.png" alt="Voting preference by geography" width="360"/>
 <!--excerpt--></p>
 <p>However, this demographic and geographic information wasn't all we had to go off of - we actually conducted a poll of some of these voters and determined whether or not they voted for our candidate.</p>
 <p>Using this voting data, the aforementioned demographics and geographical data, I trained a popular machine learning classification model, <a href="https://en.wikipedia.org/wiki/Random_forest">Random Forest</a>, so that we could predict the affiliation of the rest of the voters whose ballots were invalidated, and hence prioritize them in our legal case.</p>
