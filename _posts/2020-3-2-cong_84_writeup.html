@@ -2,6 +2,7 @@
 layout: post
 title: A Machine Learning model comparison on the 1984 Congressional Voting Records Dataset
 ---
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -14264,9 +14265,11 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The goal of this project is to train and compare several common Supervised Machine Learning models on the <a href="https://archive.ics.uci.edu/ml/datasets/congressional+voting+records" title="Congressional Voting Records Data Set">1984 Congressional Voting Records Dataset</a>.</p>
-<p>The Machine Learning models used and compared here are several classifiers: K-Nearest Neighbors (KNN), Support-Vector Machine Classifier (SVC), Logistic Regression(LogReg), and the Random Forest Classifier. I learned to use these models from <a href="http://www.datacamp.com">Datacamp</a>'s course on Supervised Learning. 
-<!--excerpt-->
-Each one of these models is meant to classify an observation. In this case, the observations are the voting records of members of the House of Representatives in 1984, and the desired classification is Party Affiliation - Republican or Democrat.</p>
+<p>The Machine Learning models used and compared here are several classifiers: K-Nearest Neighbors (KNN), Support-Vector Machine Classifier (SVC), Logistic Regression(LogReg), and the Random Forest Classifier. I learned to use these models from <a href="http://www.datacamp.com">Datacamp</a>'s course on Supervised Learning, including training and evaluation of model performance.</p>
+<p>One common way to evaluate model performance is using the <a href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc">Receiver Operating Characteristic Curve</a> (or ROC). We'll go into more detail later, but this gives us quick overview of what model parameters can give optimal performance in terms of true positives and false positives.
+<img src="https://illesial.github.io/images/ROC.png" alt="ROC Curve" width="360" align="center"/>
+<!--excerpt--></p>
+<p>Each one of the models named above is meant to classify an observation. In this case, the observations are the voting records of members of the House of Representatives in 1984, and the desired classification is Party Affiliation - Republican or Democrat.</p>
 <p>Each model will be trained on a fraction of the dataset: a fraction of the voting records will be provided, along with the party affiliation of that voter. The models will then attempt to predict what the party affiliation is of the remaining data: based on the voting record of each congressional member, what party do they belong to?</p>
 <p>We'll begin by importing packages, starting with pandas as pd and numpy as np. We'll also our import some models and tools from scikit-learn (<code>sklearn</code>), including <code>train_test_split</code>, <code>GridSearchCV</code>, and <code>classification_report</code>, among others.</p>
 
